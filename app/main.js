@@ -4,6 +4,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import './main.css';
 import './main.scss';
+import pug from 'pug-loader!./index.pug';
 
 function component () {
 	var element = document.createElement('div');
@@ -16,6 +17,8 @@ function component () {
 }
 
 document.body.appendChild(component());
+
+$('body').append(pug());
 
 let foo = 'foo bar baz mar';
 
